@@ -7,7 +7,7 @@ Webdriver.io for automated testing
 ## webdriver.io homepage:
 https://webdriver.io/
 
-<img src="node">
+<img src="node.jpg">
 ## Node.js JavaScript runtime
 https://nodejs.org/
 
@@ -133,4 +133,4 @@ https://webdriver.io/docs/sync-vs-async.html
 
 To use async mode @wdio/sync needs to be installed
 
-
+![footer](https://capsule-render.vercel.app/api?type=slice&color=auto&height=130&section=footer)
