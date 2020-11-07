@@ -150,7 +150,7 @@ const link = $('=WebdriverIO')
 console.log(link.getText())             // outputs: "WebdriverIO"
 console.log(link.getAttribute('href'))  // outputs: "https://webdriver.io"
 ```
-To use partially matching link text '*'
+To use partially matching **link text** '*'
 ```
 const link = $('*=driver')
 console.log(link.getText())             // outputs: "WebdriverIO"
@@ -179,7 +179,7 @@ const header = $('h1=Welcome')
 console.log(header.getText())           // outputs: "Welcome to my Page"
 ```
 
-To get the element by ID:
+To get the element by **ID**:
 Example:
 ```
 <i class="someElem" id="elem">WebdriverIO is the best</i>
@@ -193,7 +193,7 @@ const idAndText = $('#elem=WebdriverIO is the best')
 console.log(idAndText.getText())        // outputs: "WebdriverIO is the best"
 ```
 
-Tag Name
+**Tag Name**
 Example:
 ```
 <my-element>WebdriverIO is the best</my-element>
@@ -211,7 +211,7 @@ Name Attribute:
 const classNameAndText = $('[name="username"]')
 console.log(classNameAndText.getValue()) // outputs: "foobar"
 ```
-xPath:
+**xPath:**
 ```
 <html>
     <body>
@@ -230,6 +230,11 @@ To use traverse xPath on DOM tree:
 const parent = paragraph.$('..')
 console.log(parent.getTagName())        // outputs: "body"
 ```
-For ID WebDriver has no syntax. To get the element it should use either CSS selector (#<my element ID>) or xPath (//*[@id="my element ID>"])
+For **ID** WebDriver has no syntax. To get the element it should use either CSS selector (#<my element ID>) or xPath (//*[@id="my element ID>"])
+
+```
+const elem = $('#elem') // or $(() => document.getElementById('elem'))
+elem.$(function () { return this.nextSibling.nextSibling }) // (first sibling is #text with value ("↵"))
+```
 
 ![footer](https://capsule-render.vercel.app/api?type=slice&color=auto&height=130&section=footer)
