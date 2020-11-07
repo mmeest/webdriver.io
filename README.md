@@ -35,7 +35,9 @@ To test Node.js version:
 https://github.com/nvm-sh/nvm
 
 To test NPM version:
-* npm -v *
+```
+npm -v
+```
 
 ## NPM - Node.js package manager:
 https://www.npmjs.com/
@@ -44,38 +46,58 @@ The NPM program is installed on your computer when you install Node.js
 
 ## Create new webdriver.io project on command line
 New project named 'webdriverio-test':
-* mkdir webdriverio-test && cd webdriverio-test *
+```
+mkdir webdriverio-test && cd webdriverio-test
+```
 
 To initialize project:
-* npm init -y *
+```
+npm init -y
+```
 
 To install webdriver testrunner:
-* npm i --save-dev @wdio/cli *
+```
+npm i --save-dev @wdio/cli
+```
 
 To generate configuration file 'wdio.conf.js':
-* npx wdio config -y *
+```
+npx wdio config -y
+```
 
 To create folder for test files:
-* mkdir -p ./test/specs *
+```
+mkdir -p ./test/specs
+```
 On ERROR: 'The syntax of the command is incorrect' use backslashes '\':
-*  mkdir -p .\test\specs *
+```
+mkdir -p .\test\specs
+```
 
 Install 'touch' on node.js:
-* npm install touch-cli -g *
+```
+npm install touch-cli -g
+```
 
 Create a new file in that folder (we'll call it basic.js):
-* touch ./test/specs/basic.js *
+```
+touch ./test/specs/basic.js
+```
 
 Copy following code to 'basic.js':
-* describe('webdriver.io page', () => {
+```
+describe('webdriver.io page', () => {
     it('should have the right title', () => {
         browser.url('https://webdriver.io')
         expect(browser).toHaveTitle('WebdriverIO · Next-gen browser and mobile automation test framework for Node.js');
     })
-}) *
+}) 
+```
 
 To run the test:
-* npx wdio wdio.conf.js *
+```
+npx wdio wdio.conf.js
+```
 
 ## Sync / Async mode:
 https://webdriver.io/docs/sync-vs-async.html
