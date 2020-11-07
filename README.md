@@ -1,6 +1,7 @@
 ![header](https://capsule-render.vercel.app/api?type=slice&color=auto&height=130&section=header&text=Webdriver.io&fontSize=30&fontAlign=80)
 
 <img src="webdriver.jpg">
+
 # Webdriver.io
 Webdriver.io for automated testing
 
@@ -8,6 +9,7 @@ Webdriver.io for automated testing
 https://webdriver.io/
 
 <img src="node.jpg">
+
 ## Node.js JavaScript runtime
 https://nodejs.org/
 
@@ -46,6 +48,7 @@ npm -v
 ```
 
 <img src="npm.jpg">
+
 ## NPM - Node.js package manager:
 https://www.npmjs.com/
 
