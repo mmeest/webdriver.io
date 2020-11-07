@@ -59,7 +59,7 @@ The NPM program is installed on your computer when you install Node.js
 ```
 mkdir webdriverio-test && cd webdriverio-test
 ```
-On ERROR 'the token '&&' is not a valid statement separator in this version'
+**On ERROR** 'the token '&&' is not a valid statement separator in this version'
 Change '&&' to ';':
 ```
 mkdir webdriverio-test ; cd webdriverio-test
@@ -79,11 +79,11 @@ npm i --save-dev @wdio/cli
 ```
 npx wdio config -y
 ```
-On ERROR: 'The Windows SDK version 8.1 was not found'
+**On ERROR:** 'The Windows SDK version 8.1 was not found'
 Download and run SDK 8.1:
 https://developer.microsoft.com/en-us/windows/downloads/sdk-archive/
 
-On ERROR: 'error trk0005 failed to locate cl.exe' install global tools:
+**On ERROR:** 'error trk0005 failed to locate cl.exe' install global tools:
 ```
 npm install --global --production windows-build-tools
 ```
@@ -101,7 +101,7 @@ npm install --global --production windows-build-tools
 ```
 mkdir -p ./test/specs
 ```
-On ERROR: 'The syntax of the command is incorrect' use backslashes '\':
+**On ERROR:** 'The syntax of the command is incorrect' use backslashes '\':
 ```
 mkdir -p .\test\specs
 ```
