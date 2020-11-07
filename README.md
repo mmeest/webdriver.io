@@ -136,4 +136,100 @@ https://webdriver.io/docs/sync-vs-async.html
 
 To use async mode @wdio/sync needs to be installed
 
+# Usage
+
+**Link Text**
+
+```
+<a href="https://webdriver.io">WebdriverIO</a>
+```
+
+To get the anchor element with specific text, query starts with equal sign '=':
+```
+const link = $('=WebdriverIO')
+console.log(link.getText())             // outputs: "WebdriverIO"
+console.log(link.getAttribute('href'))  // outputs: "https://webdriver.io"
+```
+To use partially matching link text '*'
+```
+const link = $('*=driver')
+console.log(link.getText())             // outputs: "WebdriverIO"
+```
+
+To use multiple queries
+```
+const elem = $('header').$('*=driver')
+```
+
+**Element with certain text**
+```
+<h1 alt="welcome-to-my-page">Welcome to my Page</h1>
+```
+
+To call current 'h1' element:
+```
+const header = $('h1=Welcome to my Page')
+console.log(header.getText())           // outputs: "Welcome to my Page"
+console.log(header.getTagName())        // outputs: "h1"
+```
+
+Or use partial text:
+```
+const header = $('h1=Welcome')
+console.log(header.getText())           // outputs: "Welcome to my Page"
+```
+
+To get the element by ID:
+Example:
+```
+<i class="someElem" id="elem">WebdriverIO is the best</i>
+```
+To call it:
+```
+const classNameAndText = $('.someElem=WebdriverIO is the best')
+console.log(classNameAndText.getText()) // outputs: "WebdriverIO is the best"
+
+const idAndText = $('#elem=WebdriverIO is the best')
+console.log(idAndText.getText())        // outputs: "WebdriverIO is the best"
+```
+
+Tag Name
+Example:
+```
+<my-element>WebdriverIO is the best</my-element>
+```
+Query:
+```
+const classNameAndText = $('<my-element />')
+console.log(classNameAndText.getText()) // outputs: "WebdriverIO is the best"
+```
+
+Name Attribute:
+```
+<input name="username" value="foobar" />
+
+const classNameAndText = $('[name="username"]')
+console.log(classNameAndText.getValue()) // outputs: "foobar"
+```
+xPath:
+```
+<html>
+    <body>
+        <p>foobar</p>
+        <p>barfoo</p>
+    </body>
+</html>
+```
+To get second paragraph with xPath:
+```
+const paragraph = $('//body/p[2]')
+console.log(paragraph.getText())        // outputs: "barfoo"
+```
+To use traverse xPath on DOM tree:
+```
+const parent = paragraph.$('..')
+console.log(parent.getTagName())        // outputs: "body"
+```
+For ID WebDriver has no syntax. To get the element it should use either CSS selector (#<my element ID>) or xPath (//*[@id="my element ID>"])
+
 ![footer](https://capsule-render.vercel.app/api?type=slice&color=auto&height=130&section=footer)
