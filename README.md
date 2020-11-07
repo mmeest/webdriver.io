@@ -29,7 +29,9 @@ https://nodejs.org/download/release/v13.14.0/node-v13.14.0-x64.msi
 Tutorial: https://www.centennialsoftwaresolutions.com/post/install-node-js-on-windows-7
 
 To test Node.js version:
-* node -v *
+```
+node -v 
+```
 
 ## NVM - Node Version Manager
 https://github.com/nvm-sh/nvm
@@ -49,6 +51,11 @@ The NPM program is installed on your computer when you install Node.js
 ```
 mkdir webdriverio-test && cd webdriverio-test
 ```
+On ERROR 'the token '&&' is not a valid statement separator in this version'
+Change '&&' to ';':
+```
+mkdir webdriverio-test ; cd webdriverio-test
+```
 
 2. Initialize project:
 ```
@@ -67,6 +74,11 @@ npx wdio config -y
 On ERROR: 'The Windows SDK version 8.1 was not found'
 Download and run SDK 8.1:
 https://developer.microsoft.com/en-us/windows/downloads/sdk-archive/
+
+On ERROR: 'error trk0005 failed to locate cl.exe' install global tools:
+```
+npm install --global --production windows-build-tools
+```
 
 ** Dependencies installed on package.json: **
 * @wdio/gli
