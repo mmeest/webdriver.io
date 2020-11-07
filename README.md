@@ -45,27 +45,39 @@ https://www.npmjs.com/
 The NPM program is installed on your computer when you install Node.js
 
 ## Create new webdriver.io project on command line
-New project named 'webdriverio-test':
+1. Create new project named 'webdriverio-test':
 ```
 mkdir webdriverio-test && cd webdriverio-test
 ```
 
-To initialize project:
+2. Initialize project:
 ```
 npm init -y
 ```
 
-To install webdriver testrunner:
+3. Install webdriver testrunner:
 ```
 npm i --save-dev @wdio/cli
 ```
 
-To generate configuration file 'wdio.conf.js':
+4. Generate configuration file 'wdio.conf.js':
 ```
 npx wdio config -y
 ```
+On ERROR: 'The Windows SDK version 8.1 was not found'
+Download and run SDK 8.1:
+https://developer.microsoft.com/en-us/windows/downloads/sdk-archive/
 
-To create folder for test files:
+* Dependencies installed on package.json:
+@wdio/gli
+@wdio/local-runner
+@wdio/mocha-framework
+@wdio/spec-reporter
+@wdio/sync
+chromedriver
+wdio-chromedriver-service
+
+5. Create folder for test files:
 ```
 mkdir -p ./test/specs
 ```
@@ -74,17 +86,17 @@ On ERROR: 'The syntax of the command is incorrect' use backslashes '\':
 mkdir -p .\test\specs
 ```
 
-Install 'touch' on node.js:
+6. Install 'touch' on node.js:
 ```
 npm install touch-cli -g
 ```
 
-Create a new file in that folder (we'll call it basic.js):
+7. Create a new file in that folder (we'll call it basic.js):
 ```
 touch ./test/specs/basic.js
 ```
 
-Copy following code to 'basic.js':
+8. Copy following code to 'basic.js':
 ```
 describe('webdriver.io page', () => {
     it('should have the right title', () => {
@@ -94,7 +106,7 @@ describe('webdriver.io page', () => {
 }) 
 ```
 
-To run the test:
+9. Run the test:
 ```
 npx wdio wdio.conf.js
 ```
