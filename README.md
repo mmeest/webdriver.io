@@ -68,14 +68,14 @@ On ERROR: 'The Windows SDK version 8.1 was not found'
 Download and run SDK 8.1:
 https://developer.microsoft.com/en-us/windows/downloads/sdk-archive/
 
-* Dependencies installed on package.json:
-@wdio/gli
-@wdio/local-runner
-@wdio/mocha-framework
-@wdio/spec-reporter
-@wdio/sync
-chromedriver
-wdio-chromedriver-service
+** Dependencies installed on package.json: **
+* @wdio/gli
+* @wdio/local-runner
+* @wdio/mocha-framework
+* @wdio/spec-reporter
+* @wdio/sync
+* chromedriver
+* wdio-chromedriver-service
 
 5. Create folder for test files:
 ```
