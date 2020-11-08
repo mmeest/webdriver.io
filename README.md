@@ -88,7 +88,7 @@ https://developer.microsoft.com/en-us/windows/downloads/sdk-archive/
 npm install --global --production windows-build-tools
 ```
 
-**Dependencies installed on package.json: **
+**Dependencies installed on package.json:**
 * @wdio/gli
 * @wdio/local-runner
 * @wdio/mocha-framework
