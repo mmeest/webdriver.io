@@ -139,6 +139,7 @@ To use async mode @wdio/sync needs to be installed
 <img src="chai.jpg">
 
 ## Chai JS for extra features
+Chai is free and open source library to use on javascript testing framework.\
 https://www.chaijs.com/
 
 # Usage
