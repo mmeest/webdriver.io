@@ -136,6 +136,11 @@ https://webdriver.io/docs/sync-vs-async.html
 
 To use async mode @wdio/sync needs to be installed
 
+<img src="chai.jpg">
+
+## Chai JS for extra features
+https://www.chaijs.com/
+
 # Usage
 
 **Link Text**
@@ -237,7 +242,12 @@ const elem = $('#elem') // or $(() => document.getElementById('elem'))
 elem.$(function () { return this.nextSibling.nextSibling }) // (first sibling is #text with value ("↵"))
 ```
 
+<img src="vscode.jpg">
+
 # Autocomplete in Visual Studio Code:
+
+<img src="mocha.jpg">
+
 **Mocha Snippet**
 Describe block -> desc + 'Enter'
 
@@ -286,6 +296,12 @@ https://webdriver.io/docs/api/expect-webdriverio.html
 expect(browser).title('Electronics');
 ```
 
+**Expect to have url**
+```
+browser.url('https://webdriver.io/')
+expect(browser).toHaveUrl('https://webdriver.io')
+```
+
 **Expect textInputField to have value**
 ```
 expect('searchInput').toHaveValue('My Text');
@@ -306,5 +322,19 @@ const elem = $('.tagline')
 expect(elem).toHaveTextContaining('browser and mobile automation test framework')
 ```
 
+**Expect to have link containing**
+```
+const link = $('a')
+expect(link).toHaveLinkContaining('webdriver.io')
+```
+
+**Expect to be clickable**
+```
+const elem = $('#elem')
+expect(elem).toBeClickable()
+```
+
+**Code Reuse - Page Object Model**
+https://webdriver.io/docs/pageobjects.html
 
 ![footer](https://capsule-render.vercel.app/api?type=slice&color=auto&height=130&section=footer)
