@@ -142,7 +142,7 @@ To use async mode @wdio/sync needs to be installed
 Chai is free and open source library to use on javascript testing framework.\
 https://www.chaijs.com/
 
-# Usage
+# WebdriverIO Usage
 
 **Link Text**
 
