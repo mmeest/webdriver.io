@@ -262,6 +262,10 @@ https://webdriver.io/docs/api/browser/$.html
 
 **$$ - Find Multiple Elements**\
 https://webdriver.io/docs/api/browser/$$.html
+$$ - returns an Array. To get FIRST element from array:
+```
+return $$('section.b-promobanner')[1];
+```
 
 **Value to variable(by ID)**
 ```
@@ -336,5 +340,8 @@ expect(elem).toBeClickable()
 
 **Code Reuse - Page Object Model**
 https://webdriver.io/docs/pageobjects.html
+
+#WebdriverIO tutorial from Automation Bro on YouTube
+https://www.youtube.com/watch?v=e8goAKb6CC0&list=PL6AdzyjjD5HBbt9amjf3wIVMaobb28ZYN
 
 ![footer](https://capsule-render.vercel.app/api?type=slice&color=auto&height=130&section=footer)
