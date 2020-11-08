@@ -136,7 +136,7 @@ npx wdio wdio.conf.js
 ## Sync / Async mode:
 https://webdriver.io/docs/sync-vs-async.html
 
-To use async mode @wdio/sync needs to be installed
+To use sync mode @wdio/sync needs to be installed
 
 ## Cross browser usage:
 https://webdriver.io/docs/driverbinaries.html
