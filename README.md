@@ -8,6 +8,8 @@ Webdriver.io for automated testing
 ## webdriver.io homepage:
 https://webdriver.io/
 
+WebdriverIO needs Node.js installed
+
 <img src="node.jpg">
 
 ## Node.js JavaScript runtime
