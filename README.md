@@ -237,4 +237,74 @@ const elem = $('#elem') // or $(() => document.getElementById('elem'))
 elem.$(function () { return this.nextSibling.nextSibling }) // (first sibling is #text with value ("↵"))
 ```
 
+# Autocomplete in Visual Studio Code:
+**Mocha Snippet**
+Describe block -> desc + 'Enter'
+
+# Actions:
+**Open page**
+```
+browser.url('https://www.ebay.com');
+```
+
+**$ - Find Element**\
+https://webdriver.io/docs/api/browser/$.html
+
+**$$ - Find Multiple Elements**\
+https://webdriver.io/docs/api/browser/$$.html
+
+**Value to variable(by ID)**
+```
+const searchBtn = $('#gh-btn');
+```
+
+**Nth selection from dropdown**
+```
+const category = $('#gh-cat option:nth-child(1)');
+```
+
+**Element with DOM element name and class name**
+```
+const poromoBanner = $('section.b-promobanner');
+```
+
+**Insert value to textField**
+```
+searchInput.addValue('My text');
+```
+
+**Click a button**
+```
+searchBtn.click();
+```
+
+**EXPECT**\
+https://webdriver.io/docs/api/expect-webdriverio.html
+
+**Expect browser title**
+```
+expect(browser).title('Electronics');
+```
+
+**Expect textInputField to have value**
+```
+expect('searchInput').toHaveValue('My Text');
+```
+
+**Expect element displayed**
+```
+const elem = $('#elem')
+expect(elem).toBeDisabled()
+// same as
+expect(elem).not.toBeEnabled()
+```
+
+**Expect to have text containing**
+```
+browser.url('https://webdriver.io/')
+const elem = $('.tagline')
+expect(elem).toHaveTextContaining('browser and mobile automation test framework')
+```
+
+
 ![footer](https://capsule-render.vercel.app/api?type=slice&color=auto&height=130&section=footer)
