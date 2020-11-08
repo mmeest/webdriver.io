@@ -136,6 +136,116 @@ https://webdriver.io/docs/sync-vs-async.html
 
 To use async mode @wdio/sync needs to be installed
 
+## Cross browser usage:
+https://webdriver.io/docs/driverbinaries.html
+
+Windows (64 bit / Chocolatey) install: \
+choco install selenium-gecko-driver
+
+<img src="selenium.jpg">
+
+## Selenium Standalone Service:
+https://webdriver.io/docs/selenium-standalone-service.html
+https://www.npmjs.com/package/selenium-standalone
+
+Supported Webdrivers:
+* ChromeDriver
+* FirefoxDriver
+* IEDriver
+* Edge WebDriver
+* Chromium Edge WebDriver
+
+To install Selenium Standalone Service globally:
+```
+npm install selenium-standalone@latest -g
+selenium-standalone install && selenium-standalone start
+```
+
+To install Selenium Standalone Service local package:
+```
+npm install selenium-standalone --save-dev
+./node_modules/.bin/selenium-standalone install && ./node_modules/.bin/selenium-standalone start
+```
+
+**Configuration**
+
+By default, Google Chrome and Firefox are available when installed on the host system. In order to use the service you need to add selenium-standalone to your service array:
+```
+// wdio.conf.js
+const drivers = {
+    chrome: { version: '86.0.4240.22' }, // https://chromedriver.chromium.org/
+    firefox: { version: '0.27.0' } // https://github.com/mozilla/geckodriver/releases
+    chromiumedge: { version: '85.0.564.70' } // https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+}
+
+export.config = {
+    // ...
+    services: [
+        ['selenium-standalone', {
+            logPath: 'logs',
+            installArgs: { drivers },
+            args: { drivers },
+        }]
+    ],
+    // ...
+};
+```
+
+## Powershell for installing Chocolately:
+https://github.com/PowerShell/PowerShell/releases/tag/v7.0.3
+https://www.thomasmaurer.ch/2019/07/how-to-install-and-update-powershell-7/
+https://www.thomasmaurer.ch/2020/03/whats-new-in-powershell-7-check-it-out/
+
+<img src="choco.jpg">
+
+## Chocolatey Package manager on Windows for Firefox Gecko driver:
+https://chocolatey.org/
+
+A. To install on Windows Powershell:\
+
+B. To download directly Nupkg(.zip file):\
+https://chocolatey.org/api/v2/package/chocolatey
+In Visual Studio Code: Tools > Options > NuGet Package Manager > Package Sources
+
+<img src="allure.jpg">
+
+## Allure Reporter
+https://webdriver.io/docs/allure-reporter.html
+https://docs.qameta.io/allure/
+
+* Installation
+```
+npm install @wdio/allure-reporter --save-dev
+```
+
+Configure the output directory in your wdio.conf.js file:
+```
+exports.config = {
+    // ...
+    reporters: [['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
+    }]],
+    // ...
+}
+```
+
+**Allure command-line Tool:**
+https://www.npmjs.com/package/allure-commandline
+* requires Java 8 or higher
+https://www.oracle.com/java/technologies/javase-jre8-downloads.html
+
+To install Allure command-line tool:
+```
+npm install -g allure-commandline --save-dev
+```
+
+To generate reports with Allure for example('allure-results' folder):
+```
+allure generate allure-results/ && allure open
+```
+
 <img src="chai.jpg">
 
 ## Chai JS for extra features
