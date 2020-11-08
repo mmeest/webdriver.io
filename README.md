@@ -362,6 +362,14 @@ elem.$(function () { return this.nextSibling.nextSibling }) // (first sibling is
 <img src="mocha.jpg">
 
 **Mocha Snippet**
+https://marketplace.visualstudio.com/items?itemName=spoonscen.es6-mocha-snippets
+
+**Supported languages (file extensions):**
+* JavaScript (.js)
+* TypeScript (.ts)
+* JavaScript React (.jsx)
+* TypeScript React (.tsx)
+
 Describe block -> desc + 'Enter'
 
 # Actions:
