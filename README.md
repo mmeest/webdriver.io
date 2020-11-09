@@ -133,6 +133,9 @@ describe('webdriver.io page', () => {
 npx wdio wdio.conf.js
 ```
 
+**On ERROR:** 'wdio: command not found'\
+Make sure you are in right folder to start the test.
+
 ## Sync / Async mode:
 https://webdriver.io/docs/sync-vs-async.html
 
